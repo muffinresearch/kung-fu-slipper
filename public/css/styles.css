@@ -1,0 +1,64 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    background: url(../img/noise.gif);
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    padding: 20px;
+    background: rgba(0, 167, 121, 0.6);
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+h1 {
+    margin-bottom: 50px;
+}
+
+img {
+    width: 100%;
+}
+
+.social-icons {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.facebook a,
+.twitter a {
+    display: block;
+    height: 77px;
+    text-indent: -999em;
+    width: 77px;
+    margin: 0 15px;
+    opacity: 0.6;
+}
+
+.facebook a:hover,
+.twitter a:hover {
+    opacity: 1;
+    transition: opacity 0.3s ease-out;
+}
+
+.twitter a {
+    background: url(../img/twitter.svg) no-repeat;
+}
+
+.facebook a {
+    background: url(../img/facebook.svg) no-repeat;
+}
