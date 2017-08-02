@@ -3,56 +3,122 @@
 }
 
 html {
-    background: url(../img/noise.gif);
-}
-
-html, body {
-    height: 100%;
     margin: 0;
+    font-family: sans-serif;
+    color: #fff;
 }
 
 body {
-    padding: 20px;
-    background: rgba(0, 167, 121, 0.6);
+    height: 100%;
+    background: rgba(0, 167, 121, 1);
+    margin: 0 auto;
+    line-height: 1.35;
 }
 
-section {
+main {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px 20px 100px 20px;
+}
+
+
+.logo {
+    padding-top: 40px;
+    clear: left;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100%;
+    margin-bottom: -70px;
+}
+
+
+nav {
+    width: 100%;
+    position: fixed;
+    background: rgba(0, 167, 121, 1);
+    box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.05);
+    padding: 20px;
+}
+
+@media (min-width: 1060px) {
+    nav {
+        background: rgba(0, 167, 121, 0.8);
+    }
+}
+
+nav ul {
+    margin: 0 auto;
+    list-style-type: none;
+    max-width: 560px;
+    padding: 0;
+}
+
+nav li {
+    float: left;
+    margin-right: 20px;
+}
+
+nav a {
+    color: #fff;
 }
 
 h1 {
-    margin-bottom: 50px;
+    margin: 50px 0 25px;
+}
+
+h2 {
+    padding-top: 85px;
 }
 
 img {
     width: 100%;
 }
 
+#particles-js {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+}
+
 .social-icons {
     display: flex;
     list-style-type: none;
     margin: 0;
-    padding: 0;
+    padding: 20px;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    justify-content: center;
 }
 
-.facebook a,
-.twitter a {
+.social-icons a {
     display: block;
     height: 77px;
     text-indent: -999em;
     width: 77px;
     margin: 0 15px;
     opacity: 0.6;
+    transition: opacity 0.3s ease-out;
 }
 
-.facebook a:hover,
-.twitter a:hover {
+@media (min-width: 1060px) {
+    .social-icons {
+        position: fixed;
+    }
+
+    .social-icons {
+        justify-content: flex-end;
+    }
+}
+
+.social-icons a:hover,
+.social-icons a:focus {
     opacity: 1;
-    transition: opacity 0.3s ease-out;
+    outline: none;
 }
 
 .twitter a {
@@ -61,4 +127,13 @@ img {
 
 .facebook a {
     background: url(../img/facebook.svg) no-repeat;
+}
+
+#shows li {
+    padding-top: 5px;
+}
+
+.past-event {
+    text-decoration: line-through;
+    color: #eee;
 }

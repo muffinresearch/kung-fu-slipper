@@ -3,16 +3,205 @@
   <head>
     <meta charset="utf-8">
     <title>Kung Fu Slipper Band</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/normalize.css" charset="utf-8">
     <link rel="stylesheet" href="css/styles.css" charset="utf-8">
+
+    <link rel="icon" type="image/png" href="kungfuslipper-favicon-16.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="kungfuslipper-favicon-32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="kungfuslipper-favicon-96.png" sizes="96x96" />
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-103815855-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+
+    <script src="js/particles.min.js"></script>
+    <script src="js/smooth-scroll.min.js"></script>
   </head>
   <body>
-    <section class="content">
-      <h1><img src="img/KungFuSlipper.svg" alt="Kung Fu Slipper" /></h1>
-      <ul class="social-icons">
-        <li class="facebook"><a href="https://www.facebook.com/kungfuslipper">Kung Fu Slipper Facebook page</a></li>
-        <li class="twitter"><a href="https://twitter.com/kungfuslipper">@kungfuslipper on Twitter</a></li>
+
+    <div id="particles-js"></div>
+    <nav>
+      <ul>
+        <li><a data-scroll href="#">Home</a></li>
+        <li><a data-scroll href="#about">About</a></li>
+        <li><a data-scroll href="#shows">Shows</a></li>
       </ul>
-    </section>
+    </nav>
+
+    <main>
+
+      <section class="logo">
+        <h1><img src="img/KungFuSlipper.svg" alt="Kung Fu Slipper" /></h1>
+      </section>
+
+      <section id="about">
+        <h2>About</h2>
+
+        <p>Kung Fu Slipper was formed by a group of musicians local to Tunbridge Wells around a shared love of
+        improvised music.</p>
+
+        <p>The majority of the band have played in various musical projects together over the years, and "The Slipper"
+        provided the perfect outlet for being able to improvise and explore a wide variety of musical ideas.</p>
+
+        <p>Rhythm plays a big part in the way the band works, and because of this, the music stays accessible whilst
+        taking the listener on a musical journey visiting many different musical genres from Jazz, Funk, Blues, Afrobeat, Reggae and beyond&hellip;</p>
+
+        <p>The improvisational elements sometimes use an existing idea as a "head" which allows for the band to improvise
+        around that starting point, following a standard approach used by many Jazz bands. Sometimes a musical idea will
+        be created on the spur of the moment and the band will listen to each other to expand on that idea and see where it goes.</p>
+      </section>
+
+      <section id="shows">
+        <h2>Shows</h2>
+
+        <h3>2017</h3>
+
+        <h4>August</h4>
+        <ul>
+          <li data-gig-date="2017-08-12">12th August - Private Event</li>
+          <li data-gig-date="2017-08-06">6th August - Unfest Sunday Sessions - House Band for a Summer Special Jam - Forum Tunbridge Wells (on at 2pm)</li>
+          <li data-gig-date="2017-08-05">5th August - Private Fund-raising event</li>
+        </ul>
+
+        <h4>July</h4>
+        <ul>
+          <li data-gig-date="2017-07-30">30th July - UnFest Sunday Sessions - Forum Tunbridge Wells</li>
+          <li data-gig-date="2017-07-08">8th July - VineFest - Sevenoaks</li>
+        </ul>
+      </section>
+
+    </main>
+
+    <ul class="social-icons">
+      <li class="facebook"><a href="https://www.facebook.com/kungfuslipper">Kung Fu Slipper Facebook page</a></li>
+      <li class="twitter"><a href="https://twitter.com/kungfuslipper">@kungfuslipper on Twitter</a></li>
+    </ul>
+
+    <script>
+
+    var gigLis = document.querySelectorAll('[data-gig-date]');
+    for (var i=0; i < gigLis.length; i++) {
+      var date = gigLis[i].getAttribute('data-gig-date');
+      var now = new Date();
+      var today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+      if (Date.parse(date) < today) {
+        gigLis[i].className = 'past-event';
+      }
+    }
+
+	  var scroll = new SmoothScroll('a[data-scroll]');
+
+      particlesJS('particles-js', {
+         "particles": {
+           "number": {
+             "value": 6,
+             "density": {
+               "enable": true,
+             }
+           },
+           "color": {
+             "value": "#1b1e34"
+           },
+           "shape": {
+             "type": "circle",
+             "stroke": {
+               "width": 0,
+               "color": "#000"
+             },
+             "polygon": {
+               "nb_sides": 6
+             },
+             "image": {
+               "src": "img/github.svg",
+               "width": 100,
+               "height": 100
+             }
+           },
+           "opacity": {
+             "value": 0.1,
+             "random": true,
+             "anim": {
+               "enable": false,
+               "speed": 1,
+               "opacity_min": 0.05,
+               "sync": false
+             }
+           },
+           "size": {
+             "value": 327,
+             "random": true,
+             "anim": {
+               "enable": true,
+               "speed": 10,
+               "size_min": 40,
+               "sync": false
+             }
+           },
+           "line_linked": {
+             "enable": false,
+             "distance": 1152.1737414869347,
+             "color": "#ffffff",
+             "opacity": 1,
+             "width": 2
+           },
+           "move": {
+             "enable": true,
+             "speed": 2,
+             "direction": "none",
+             "random": false,
+             "straight": false,
+             "out_mode": "bounce",
+             "bounce": false,
+           }
+         },
+         "interactivity": {
+           "detect_on": "window",
+           "events": {
+             "onhover": {
+               "enable": false,
+               "mode": "bubble"
+             },
+             "onclick": {
+               "enable": false,
+               "mode": "push"
+             },
+             "resize": true
+           },
+           "modes": {
+             "grab": {
+               "distance": 400,
+               "line_linked": {
+                 "opacity": 1
+               }
+             },
+             "bubble": {
+               "distance": 400,
+               "size": 40,
+               "duration": 2,
+               "opacity": 8,
+               "speed": 3
+             },
+             "repulse": {
+               "distance": 200,
+               "duration": 0.4
+             },
+             "push": {
+               "particles_nb": 4
+             },
+             "remove": {
+               "particles_nb": 2
+             }
+           }
+         },
+         "retina_detect": true
+      });
+    </script>
+
   </body>
 </html>
