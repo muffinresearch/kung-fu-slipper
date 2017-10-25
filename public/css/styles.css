@@ -63,6 +63,14 @@ nav a {
     color: #fff;
 }
 
+a:link,
+a:hover,
+a:active,
+a:focus,
+a:visited {
+    color: #fff;
+}
+
 h1 {
     margin: 50px 0 25px;
 }
